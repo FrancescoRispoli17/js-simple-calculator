@@ -33,10 +33,24 @@ function addnum(numero,tasto){
     tasto.addEventListener('click', function(){
         if(screen.textContent == '0'||cont == 1)
             screen.textContent='';
-
+        cont=0;
         screen.textContent+=numero;
     })
 }
+let numeri=[];
+let operazioni=[];
 
+operazionis(summ,summ.textContent);
+operazionis(subtraction,subtraction.textContent);
+// operazionis(multiplication,multiplication.textContent);
+// operazionis(division,division.textContent);
+
+function operazionis(operazione,simbolo){
+    operazione.addEventListener('click', function(){
+        numeri.push(screen.textContent);
+        screen.textContent='';
+        operazioni.push(simbolo);
+     }) 
+}
 
 
