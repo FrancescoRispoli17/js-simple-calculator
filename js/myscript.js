@@ -52,5 +52,25 @@ function operazionis(operazione,simbolo){
         operazioni.push(simbolo);
      }) 
 }
+let cont=0;
+risultato.addEventListener('click', function(){
+        numeri.push(screen.textContent);
+        cont=1;
+        let ris=Number(numeri[0]);
+        for(let i=0; i<operazioni.length; i++){
+            if(operazioni[i]=='+')
+                ris+=Number(numeri[i+1]);
+            if(operazioni[i]=='-')
+                ris-=Number(numeri[i+1]);
+            // if(operazioni[i]=='&#215;')
+            //     ris=Number(numeri[i+1]);
+            // if(operazioni[i]=='&#247;')
+            //     ris-=Number(numeri[i+1]);
+            // console.log(ris);
+        }
+        screen.textContent=ris;
+        numeri=[];
+        operazioni=[];
+     })
 
 
