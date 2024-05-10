@@ -18,6 +18,25 @@ const division=document.querySelector('#division');
 const risultato=document.querySelector('.ris');
 
 
+addnum(seven.textContent,seven);
+addnum(eight.textContent,eight);
+addnum(nine.textContent,nine);
+addnum(four.textContent,four);
+addnum(five.textContent,five);
+addnum(six.textContent,six);
+addnum(one.textContent,one);
+addnum(two.textContent,two);
+addnum(three.textContent,three);
+addnum(zero.textContent,zero);
+
+function addnum(numero,tasto){
+    tasto.addEventListener('click', function(){
+        if(screen.textContent == '0'||cont == 1)
+            screen.textContent='';
+
+        screen.textContent+=numero;
+    })
+}
 
 
 
